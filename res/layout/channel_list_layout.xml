@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dfe5d7" >
+
+    <!--
+         <TextView
+        android:id="@+id/channelHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#444444"
+        android:padding="5dip"
+        android:text="Channels"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff" />
+    -->
+
+    <RelativeLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#df4c40" >
+
+        <ImageView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:src="@drawable/header" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/channelHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerContainer"
+        android:background="@drawable/channelheaderbg"
+        android:gravity="center"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:text="Channel List"
+        android:textSize="19sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/channelHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#dfe5d7" >
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dip"
+            android:paddingLeft="5dip"
+            android:dividerHeight="0dip"
+            android:divider="#dfe5d7"
+            android:paddingRight="5dip"
+            android:paddingTop="10dp"
+            tools:context=".ChannelListActivity" />
+
+        <Button
+            android:id="@+id/addChannel"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#df4c40"
+            android:text="Add New Channel"
+            android:padding="10dip"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>
